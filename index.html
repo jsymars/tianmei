@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="zh-CN"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;我们的纪念日 · 2025.11.15&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>* { margin: 0; padding: 0; box-sizing: border-box; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body { font-family: 'Noto Sans SC', sans-serif; overflow: hidden; background: #fff; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.slider { display: flex; width: 100vw; height: 100vh; transition: transform 0.6s ease; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.page {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 2rem; flex-direction: column; text-align: center; position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.page-content { max-width: 100%; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.main-title { font-size: 2.2rem; font-weight: 700; line-height: 1.4; color: #1a1a1a; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.main-title .highlight { color: #e91e63; font-size: 2.5rem; display: block; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.section-title { font-size: 1.8rem; font-weight: 600; margin: 1rem 0; color: #333; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.text-content { font-size: 1.1rem; line-height: 1.8; color: #444; max-width: 320px; margin: 1rem auto; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.subtitle { margin-top: 2rem; color: #e91e63; font-weight: 500; font-size: 1rem; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.main-photo, .content-img {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 85vw; max-width: 320px; height: auto; border-radius: 18px; margin: 1.5rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 10px 30px rgba(0,0,0,0.12);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.content-video {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 85vw; max-width: 340px; height: 200px; border-radius: 16px; margin: 1.5rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.bg-gradient-pink { background: linear-gradient(to bottom, #fce7f3, #ffffff); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.bg-gradient-indigo { background: linear-gradient(to bottom, #e0e7ff, #ffffff); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.dots {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; gap: 10px; z-index: 20;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.dot {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 10px; height: 10px; background: #ccc; border-radius: 50%; transition: 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.dot.active { background: #e91e63; transform: scale(1.3); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav-btn {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: fixed; top: 50%; transform: translateY(-50%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(0,0,0,0.5); color: white; border: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 50px; height: 50px; border-radius: 50%; font-size: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>z-index: 20; opacity: 0.7; transition: 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav-btn:hover { opacity: 1; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.left { left: 15px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.right { right: 15px; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>#music-btn {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: fixed; right: 20px; bottom: 80px; width: 44px; height: 44px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255,255,255,0.9); border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.2);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; justify-content: center; font-size: 1.5rem; z-index: 30;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>backdrop-filter: blur(10px); transition: all 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>#music-btn.paused::before { content: 'Play'; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>#music-btn.playing::before { content: 'Pause'; animation: pulse 1.5s infinite; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes pulse {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>0% { transform: scale(1); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>50% { transform: scale(1.1); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>100% { transform: scale(1); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.placeholder {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #f3f4f6; border: 2px dashed #d1d5db; color: #6b7280;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1rem; border-radius: 12px; font-size: 0.9rem; margin: 1rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 400px) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.nav-btn { display: none; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.main-title { font-size: 2rem; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.main-title .highlight { font-size: 2.2rem; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>#music-btn { bottom: 70px; right: 15px; width: 40px; height: 40px; font-size: 1.3rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- 背景音乐 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;audio id="bgm" loop&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;source src="assets/audio/bgm.mp3" type="audio/mpeg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>您的浏览器不支持音频。</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/audio&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- 音乐控制按钮 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button id="music-btn" class="paused"&gt;Play&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- 滑动容器 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div id="slider" class="slider"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 第1页：开头 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="page bg-gradient-pink"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="page-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- 需要替换：你们的合照 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="assets/img/couple.jpg" alt="需要替换：合照" class="main-photo" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="placeholder"&gt;↑ 请替换为你们的合照（couple.jpg）&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1 class="main-title"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>今天是&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="highlight"&gt;2025.11.15&lt;/span&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>我们的纪念日</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="subtitle"&gt;← 滑动继续 →&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 第2页 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="page"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="page-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;第一次牵手&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>那是一个下雨天，你递给我伞，我却牵住了你的手。</p>
+<p class="p1"><span class="Apple-converted-space">          </span>从那天起，我知道，我再也不想放开。</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- 需要替换：照片或视频 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="assets/img/placeholder.jpg" alt="需要替换" class="content-img" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="placeholder"&gt;↑ 请替换为照片或视频（placeholder.jpg）&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 第3页 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="page"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="page-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;你说想看海&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>我开车带你去了海边。风很大，你笑得像个孩子。</p>
+<p class="p1"><span class="Apple-converted-space">          </span>那一刻，我想把全世界最好的风景都给你。</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="assets/img/placeholder.jpg" alt="需要替换" class="content-img" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="placeholder"&gt;↑ 请替换为照片或视频&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 第4页 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="page"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="page-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;一起做饭&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>你切菜，我炒锅。厨房乱成一团，但我们笑得停不下来。</p>
+<p class="p1"><span class="Apple-converted-space">          </span>原来幸福就是这么简单。</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="assets/img/placeholder.jpg" alt="需要替换" class="content-img" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="placeholder"&gt;↑ 请替换为照片或视频&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 第5页 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="page"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="page-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;你生病那天&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>我守在你床边，喂你喝粥，给你量体温。</p>
+<p class="p1"><span class="Apple-converted-space">          </span>那一夜，我发誓要照顾你一辈子。</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="assets/img/placeholder.jpg" alt="需要替换" class="content-img" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="placeholder"&gt;↑ 请替换为照片或视频&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 第6页 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="page"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="page-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;我们吵架了&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>第一次冷战。你哭了，我也哭了。</p>
+<p class="p1"><span class="Apple-converted-space">          </span>但最后我们都说“对不起”，然后抱在一起。</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="assets/img/placeholder.jpg" alt="需要替换" class="content-img" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="placeholder"&gt;↑ 请替换为照片或视频&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 第7页 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="page"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="page-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;今天&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>又是一年。我们走过了风雨，也迎来了晴天。</p>
+<p class="p1"><span class="Apple-converted-space">          </span>谢谢你，一直陪在我身边。</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="assets/img/placeholder.jpg" alt="需要替换" class="content-img" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="placeholder"&gt;↑ 请替换为照片或视频&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 第8页：结尾 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="page bg-gradient-indigo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="page-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1 class="main-title"&gt;谢谢你&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-content" style="font-size:1.2rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>这一路有你，真好。&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>愿我们未来每一个纪念日，&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>都比今天更幸福。</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p style="color:#666; margin-top:1.5rem;"&gt;—— 2025.11.15&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="subtitle" style="margin-top:2rem;"&gt;THE END&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- 圆点指示器 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="dots" id="dots"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- 左右按钮 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button class="nav-btn left" id="prev"&gt;Left&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button class="nav-btn right" id="next"&gt;Right&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const slider = document.getElementById('slider');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const dotsContainer = document.getElementById('dots');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const prevBtn = document.getElementById('prev');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const nextBtn = document.getElementById('next');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const pages = document.querySelectorAll('.page');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const total = pages.length;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let current = 0;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// 音乐控制</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const audio = document.getElementById('bgm');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const musicBtn = document.getElementById('music-btn');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let isPlaying = false;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let userInteracted = false;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function unlockAudio() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!userInteracted) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>audio.play().then(() =&gt; { audio.pause(); userInteracted = true; }).catch(() =&gt; {});</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function toggleAudio() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>unlockAudio();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!userInteracted) return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (isPlaying) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>audio.pause();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>musicBtn.classList.remove('playing');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>musicBtn.classList.add('paused');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>audio.play();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>musicBtn.classList.remove('paused');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>musicBtn.classList.add('playing');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>isPlaying = !isPlaying;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>musicBtn.onclick = toggleAudio;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>['touchstart', 'click', 'keydown'].forEach(evt =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.body.addEventListener(evt, unlockAudio, { once: true });</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// 翻页</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function goTo(n) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>current = (n + total) % total;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>slider.style.transform = `translateX(-${current * 100}vw)`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>dots.forEach((d, i) =&gt; d.classList.toggle('active', i === current));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>updateButtons();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>unlockAudio();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function next() { goTo(current + 1); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function prev() { goTo(current - 1); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>prevBtn.onclick = prev;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>nextBtn.onclick = next;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// 创建圆点</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const dots = [];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>for (let i = 0; i &lt; total; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const dot = document.createElement('span');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>dot.classList.add('dot');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (i === 0) dot.classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>dot.onclick = () =&gt; goTo(i);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>dotsContainer.appendChild(dot);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>dots.push(dot);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function updateButtons() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>prevBtn.style.opacity = current === 0 ? '0.3' : '1';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>nextBtn.style.opacity = current === total - 1 ? '0.3' : '1';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>updateButtons();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// 触控滑动</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let startX = 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>slider.addEventListener('touchstart', e =&gt; startX = e.touches[0].clientX);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>slider.addEventListener('touchend', e =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const endX = e.changedTouches[0].clientX;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (startX - endX &gt; 50) next();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (endX - startX &gt; 50) prev();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// 键盘</p>
+<p class="p1"><span class="Apple-converted-space">    </span>window.addEventListener('keydown', e =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (e.key === 'ArrowRight') next();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (e.key === 'ArrowLeft') prev();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
